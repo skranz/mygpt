@@ -1,7 +1,5 @@
-label: Nice R code
-
-action: copy_prompt
-
+label: R code
+description: Translate to R code or rewrite R code with comments prefering tidyverse
 prompt: |
   Rewrite the code below as well commented R code using the following rules:
 

@@ -1,8 +1,6 @@
-label: Create MC quiz
+label: Create quiz
 
-description: |
-  Select some text in a document in RStudio. ChatGPT will add MC quiz about that text.
-
+description: Select some text in a document in RStudio. ChatGPT will add MC quiz about that text.
 prompt: |
   Create a multiple choice quiz for the text below with the following rules:
 

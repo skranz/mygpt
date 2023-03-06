@@ -1,27 +1,27 @@
-
-Name: Nice R code
-Description: Nice R code
+Name: R code
+Description: Translate to R code or rewrite R code with comments prefering tidyverse
 Binding: mygpt_code
 Interactive: false
 
+Name: Correct Spelling and Grammar
+Description: Correct Spelling and Grammar
+Binding: mygpt_correct
+Interactive: false
 
-Name: Make quiz from text
-Description: Make quiz from text
+Name: Create quiz
+Description: Select some text in a document in RStudio. ChatGPT will add MC quiz about that text.
 Binding: mygpt_quiz
 Interactive: false
 
-
-Name: Rewrite Text
-Description: Rewrite Text
+Name: Rewrite text
+Description: Rewrite text
 Binding: mygpt_rewrite
 Interactive: false
 
-
-Name: Suggest Improvement
-Description: Suggest Improvement
+Name: Suggest improvements for text
+Description: Suggest improvements for text
 Binding: mygpt_suggest
 Interactive: false
-
 
 Name: Update mygpt
 Description: Run this addin if you have removed or added new templates

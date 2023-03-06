@@ -1,4 +1,5 @@
 addin_update_mygpt = function(...) {
+  library(mygpt)
   update_mygpt()
 }
 
@@ -29,11 +30,11 @@ update_mygpt = function(project.dir = find_mygpt_dir()) {
   # Create code for inst/rstudio/addins.dcf
 
   addins.dcf = sapply(tpl.li, function(tpl) {
-    if (!is.null(tpl$descripton)) {
+    if (is.null(tpl$description)) {
       tpl$description = tpl$label
     }
-    glue_text("
-Name: {{label}}
+    glue_text(
+"Name: {{label}}
 Description: {{description}}
 Binding: mygpt_{{id}}
 Interactive: false
@@ -43,8 +44,7 @@ Interactive: false
 
   addins.dcf = c(
     addins.dcf,
-'
-Name: Update mygpt
+'Name: Update mygpt
 Description: Run this addin if you have removed or added new templates
 Binding: addin_update_mygpt
 Interactive: false
