@@ -1,3 +1,6 @@
+# This template specifies the default values for fields
+# that are not explicitly specified in other templates.
+
 label: ""
 description:
 
