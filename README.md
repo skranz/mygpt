@@ -71,7 +71,7 @@ Here just a short description.
 
 2. Open the project in RStudio and check whether you can build the R package by `Build -> Install and Restart`.
 
-3. Go to the directory `inst/templates` where you find the YAML templates for the different addons. The templates describe the ChatGPT prompt, some additional API parameters like `temperature` and how the results are shown in RStudio. Currently, there is no good documentation, but I hope most things become clear by looking at the examples. You can create new template files or change existing ones.
+3. Go to the directory `inst/templates` where you find the YAML templates for the different addons. The templates describe the ChatGPT prompt, some additional API parameters like `temperature` and how the results are shown in RStudio. Currently, there is no good documentation, but I hope most things become clear by looking at the examples. The file `default.yml` is the default template, which contains an explanation of all fields. If a field in a template is missing, the corresponding value from `default.yml` is used. You can create new template files or change existing ones. You can also change `default.yml`.s
 
 4. Call `Addins -> mygpt -> Update mygpt` to update the package, including the addins to the current templates in `inst/templates`.
 
