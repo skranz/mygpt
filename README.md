@@ -15,14 +15,21 @@ While partly replicating existing functionality, this package mainly contributes
 
 2. By default all usage of ChatGPT will be logged in a local folder. This is mainly helpful for students who are asked to document how they used ChatGPT in a thesis or project.
 
+## Installation via r-universe:
+
+```r
+install.packages('gpt4r', repos = c('https://skranz.r-universe.dev', 'https://cloud.r-project.org'))
+```
 
 # 2. First steps without customization
 
-You can first use and test mygpt without any customization. Then first install it from r-universe:
+You can first use and test mygpt without any customization.
 
-Then get and specify an OpenAI API key as explained below.
+1. Install the package (see above)
 
-Then open some document in RStudio, select some text and click on some mygpt addin in RStudio's `Addins` dropdown.
+2. Get and specify an OpenAI API key as explained below.
+
+3. Then open some document in RStudio, select some text and click on some mygpt addin in RStudio's `Addins` dropdown.
 
 
 ## Using without OpenAI API key: Just copy prompts to clipboard
@@ -58,4 +65,15 @@ Or you can create a text file `openai.key` containing just the key as string in 
 
 # 3. Customizing ChatGPT Addins via Templates
 
-TBD
+Here just a short description.
+
+1. Make a local copy of the `mygpt` repository, e.g. by downloading its [ZIP from Github](https://github.com/skranz/mygpt/archive/refs/heads/main.zip)
+
+2. Open the project in RStudio and check whether you can build the R package by `Build -> Install and Restart`.
+
+3. Go to the directory `inst/templates` where you find the YAML templates for the different addons. The templates describe the ChatGPT prompt, some additional API parameters like `temperature` and how the results are shown in RStudio. Currently, there is no good documentation, but I hope most things become clear by looking at the examples. You can create new template files or change existing ones.
+
+4. Call `Addins -> mygpt -> Update mygpt` to update the package, including the addins to the current templates in `inst/templates`.
+
+5. Go on experimenting and using the package!
+
