@@ -1,0 +1,30 @@
+
+Name: Nice R code
+Description: Nice R code
+Binding: mygpt_code
+Interactive: false
+
+
+Name: Make quiz from text
+Description: Make quiz from text
+Binding: mygpt_quiz
+Interactive: false
+
+
+Name: Rewrite Text
+Description: Rewrite Text
+Binding: mygpt_rewrite
+Interactive: false
+
+
+Name: Suggest Improvement
+Description: Suggest Improvement
+Binding: mygpt_suggest
+Interactive: false
+
+
+Name: Update mygpt
+Description: Run this addin if you have removed or added new templates
+Binding: addin_update_mygpt
+Interactive: false
+

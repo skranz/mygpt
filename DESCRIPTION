@@ -1,0 +1,11 @@
+Package: mygpt
+Type: Package
+Title: Customize your own ChatGPT RStudio Addins.
+Version: 0.1.0
+Author: Originally Sebastian Kranz, but adapt it to your own needs.
+Maintainer: You <yourself@somewhere.net>
+Description: See README.md for details
+Depends: gpt4r
+License: GPL > 3.0
+Encoding: UTF-8
+LazyData: true
