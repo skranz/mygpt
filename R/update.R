@@ -12,7 +12,10 @@ update_mygpt = function(project.dir = find_mygpt_dir()) {
 
   tpl.dir = file.path(project.dir, "inst/templates")
   tpl.files = list.files(tpl.dir, glob2rx("*.y*ml"),full.names = TRUE)
+  tpl.files = tpl.files[!endsWith(tpl.files,"default.yml")]
+
   tpl.ids = tools::file_path_sans_ext(basename(tpl.files))
+
 
   cat(paste0("\nParse templates...\n"))
 
@@ -79,6 +82,7 @@ Interactive: false
 
 
 find_mygpt_dir = function() {
+  restore.point("find_mygpt_dir")
   dir = rstudioapi::getActiveProject()
   if (check_mygpt_dir(dir)) return(dir)
   dir = getOption(".last.mygpt.dir")
@@ -92,6 +96,7 @@ find_mygpt_dir = function() {
 }
 
 check_mygpt_dir = function(dir, set.as.last.dir = TRUE) {
+  if (is.null(dir)) return(FALSE)
   if (isTRUE(dir=="") | is.na(dir)) return(FALSE)
   if (!file.exists(file.path(dir,"mygpt.Rproj"))) {
     return(FALSE)

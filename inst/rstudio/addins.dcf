@@ -14,12 +14,12 @@ Binding: mygpt_quiz
 Interactive: false
 
 Name: Rewrite text
-Description: Rewrite text
+Description: Insert below selected text a proposal of a rewritten, shorter version.
 Binding: mygpt_rewrite
 Interactive: false
 
 Name: Suggest improvements for text
-Description: Suggest improvements for text
+Description: The suggestions will be shown in a new document.
 Binding: mygpt_suggest
 Interactive: false
 
