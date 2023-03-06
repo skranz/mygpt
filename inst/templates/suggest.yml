@@ -1,4 +1,5 @@
 label: Suggest improvements for text
+description: The suggestions will be shown in a new document.
 
 prompt: |
   Write down an improved version of the following text and then explain concretely the different improvements and their rationale; keep all links:
@@ -10,32 +11,14 @@ parameter:
 
 # Specifies how the input and output will be presented in RStudio
 present:
-  # 3 options:
   # "inline" replace the selected text (input) in the active document
   # "open_doc" open a new document in RStudio but don't save it
   where: open_doc
-  # if where = "new_file" the file extension. Currently only r and Rmd work
-  ext: Rmd
-
-  # what and in which order will input and
-  # output be shown. Possible values:
-  # input-output
-  # output-input
-  # input
-  # output
+  # input-output, output-input, input or output
   show: input-output
-  input_header: "# Original text\n\n"
 
+  input_header: "# Original text\n\n"
   input_footer: ""
   input_line_prefix: "    "
   output_header: "\n# ChatGPT's Answer\n\n"
   output_footer: ""
-
-# What is shown on the R console
-console:
-  show_before: |
-    Task for ChatGPT: {{tpl$prompt}}
-
-    waiting for the answer...
-  show_after: " done!"
-

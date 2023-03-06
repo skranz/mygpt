@@ -1,4 +1,5 @@
 label: Rewrite text
+description: Insert below selected text a proposal of a rewritten, shorter version.
 prompt: |
   Improve the language of the following text, and, if possible, shorten it a bit but keep all content:
 
@@ -13,15 +14,7 @@ present:
   # "inline" replace the selected text (input) in the active document
   # "open_doc" open a new document in RStudio but don't save it
   where: inline
-  # if where = "new_file" the file extension
-  ext: ""
-
-  # what and in which order will input and
-  # output be shown. Possible values:
-  # input-output
-  # output-input
-  # input
-  # output
+  # input-output, output-input, input or output
   show: input-output
 
   input_header: "\n### Original text\n\n"
@@ -34,8 +27,4 @@ present:
 
 # What is shown on the R console
 console:
-  show_before: |
-    Task for ChatGPT: {{tpl$prompt}}
-
-    ... wait for answer
-  show_after: " done!"
+  show_after: " done! The rewritten text is added below the selected text."

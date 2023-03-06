@@ -1,0 +1,64 @@
+label: ""
+description:
+
+# run or copy_prompt
+action: run
+
+# Seems not yet to have much impact
+system: You are a helpful assisstant.
+
+verbose: yes
+
+parameter:
+  model: gpt-3.5-turbo
+  # temperature is between 0 and 1
+  # higher temperature tends to mean more
+  # variation and creativity in answers
+  temperature: 0.75
+
+# what shall be copied to clipboard after API call
+# none, prompt, or output
+#
+# choosing prompt is practical if you want to copy the
+# same task to Bing Chat's Web Interface
+to_clipboard: prompt
+
+# Whether by default logs should be generated
+do_log: yes
+
+# Default directory for logs
+log_dir: gpt_logs
+
+# Specifies how the input and output will be presented in RStudio
+present:
+  # "inline" replace the selected text (input) in the active document
+  # "open_doc" open a new document in RStudio but don't save it
+  where: inline
+  # if where = "new_file" the file extension. Currently only r and Rmd work
+  ext: Rmd
+
+  # what and in which order will input and
+  # output be shown.
+  # input-output, output-input, input or output
+  show: input-output
+
+  # Add text above or below shown input or output
+  input_header: ''
+  output_header: ''
+  input_footer: ''
+  output_footer: ''
+
+  # Add text before each line of input or output
+  # E.g. adding enough spaces "    " should mark
+  # the text grey in an Rmd document
+  input_line_prefix: ''
+  output_line_prefix: ''
+
+# What shall be shown in the R console before and after API call
+console:
+  show_before: |
+    Task for ChatGPT: {{tpl$prompt}}
+
+    Wait until ChatGPT is creating the answer...
+  show_after: |
+     ...done.

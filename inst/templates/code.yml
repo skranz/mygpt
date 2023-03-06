@@ -11,6 +11,11 @@ prompt: |
 
   {{text}}
 
+
+# Either "none","prompt","output"
+# "prompt" is nice if you want to use the same prompt in a web app like Bing Chat.
+to_clipboard: prompt
+
 # Parameter passed to the OpenAI API
 parameter:
   temperature: 0.7

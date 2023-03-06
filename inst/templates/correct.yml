@@ -13,21 +13,11 @@ present:
   # "inline" replace the selected text (input) in the active document
   # "open_doc" open a new document in RStudio but don't save it
   where: inline
-  # if where = "new_file" the file extension
-  ext: ""
 
-  # what and in which order will input and
-  # output be shown. Possible values:
-  # input-output
-  # output-input
-  # input
-  # output
+  # input-output, output-input, input or output
+  # only using output directly replaces the selected text
   show: output
 
 # What is shown on the R console
 console:
-  show_before: |
-    Task for ChatGPT: {{tpl$prompt}}
-
-    Wait for answer ...
   show_after: " done. The selected text is directly changed."

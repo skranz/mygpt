@@ -3,8 +3,8 @@ Description: Translate to R code or rewrite R code with comments prefering tidyv
 Binding: mygpt_code
 Interactive: false
 
-Name: Correct Spelling and Grammar
-Description: Correct Spelling and Grammar
+Name: Correct spelling and grammar
+Description: Correct spelling and grammar
 Binding: mygpt_correct
 Interactive: false
 
